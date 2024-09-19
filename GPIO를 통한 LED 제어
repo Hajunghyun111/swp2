@@ -1,0 +1,27 @@
+#define PIN_LED 7
+
+void setup() {
+    pinMode(PIN_LED, OUTPUT);
+}
+
+void loop() {
+    // 1초 동안 LED 켜기
+    digitalWrite(PIN_LED, 1);
+    delay(1000);
+
+    // 1초 동안 LED 5회 깜빡이기 (0.1초 켜짐, 0.1초 꺼짐)
+    for (int i = 0; i < 5; i++) {
+        digitalWrite(PIN_LED, 1);  
+        delay(100);                
+        digitalWrite(PIN_LED, 0); 
+        delay(100);                
+    }
+
+    // LED 끄기
+    digitalWrite(PIN_LED, 0);
+
+    // 무한 루프 상태
+    while (1) {
+       
+    }
+}
